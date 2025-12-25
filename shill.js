@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!textarea) return;
 
   // Labels (these match the existing exported IDs)
-  const mustLabelContainer = document.getElementById('style-1wIhX'); // contains "must include \"$HIVE\""
+  const mustLabelContainer = document.getElementById('style-1wIhX'); // contains "must include \"$HIVEMIND\""
   const lengthLabelContainer = document.getElementById('style-noMzF'); // contains "more than 10 symbols"
   const postContainer = document.getElementById('style-tYIG1'); // Post button wrapper
 
@@ -30,14 +30,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function check() {
     const v = (textarea.value || '');
-    const hasHive = v.indexOf('$HIVE') !== -1;
+    const hasHivemind = v.indexOf('$HIVEMIND') !== -1;
     // "more than 10 symbols" — treat as character count > 10
     const longEnough = v.length > 10;
 
-    setIndicator(mustIndicatorPath, hasHive);
+    setIndicator(mustIndicatorPath, hasHivemind);
     setIndicator(lengthIndicatorPath, longEnough);
 
-    if (hasHive && longEnough) {
+    if (hasHivemind && longEnough) {
       postContainer && postContainer.classList.add('enabled');
       textarea.classList.add('valid');
     } else {

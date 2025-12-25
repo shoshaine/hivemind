@@ -1,4 +1,4 @@
-# Hive - Solana Wallet Adapter Integration
+# Hivemind - Solana Wallet Adapter Integration
 
 This project is a simple static site. I added support for Solana wallet connections. There are two connection methods included:
 
